@@ -75,6 +75,22 @@ section {
   display: inline-block;
 }
 
+.highlighted {
+  /* border: 2px solid black; */
+  box-shadow: 11px 10px 50px 9px rgba(13, 61, 133, 0.51) inset;
+  -webkit-box-shadow: 11px 10px 50px 9px rgba(13, 61, 133, 0.51) inset;
+  -moz-box-shadow: 11px 10px 50px 9px rgba(13, 61, 133, 0.51) inset;
+}
+
+.highlighted:hover .inView {
+  color: white;
+}
+
+.inView {
+  transform: scale(1.25);
+  color: rgb(1, 71, 150);
+}
+
 .navbar__menu .menu__link {
   display: block;
   padding: 1em;
@@ -203,7 +219,6 @@ section:nth-of-type(3n + 1) .landing__container::after {
 
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
-/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
 section.active {
   background: rgb(0, 0, 0);
   background: linear-gradient(
