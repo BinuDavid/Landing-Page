@@ -100,18 +100,17 @@ navUL.addEventListener("click", (e) => {
   e.preventDefault();
   let target_link;
 
-  if (e.target.className === "menu__link") {
+  if (e.target.nodeName === "A") {
     target_link = e.target;
   } else {
     target_link = e.target.parentElement;
   }
   const href = target_link.getAttribute("href");
   const section = document.querySelector(`${href}`);
-  if (section != null) {
-    const top = section.offsetTop - nav.offsetHeight;
-    const left = section.offsetLeft;
-    scroll(top, left);
-  }
+
+  const top = section.offsetTop - nav.offsetHeight;
+  const left = section.offsetLeft;
+  scroll(top, left);
 });
 // Set sections as active
 window.addEventListener("scroll", () => {
