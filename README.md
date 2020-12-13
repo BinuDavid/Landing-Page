@@ -1,13 +1,7 @@
 # Landing Page Project
 
-## Table of Contents
+## Functionality
 
-* [Instructions](#instructions)
+When opening the landing page project in a web browser, you have _at least_ 4 sections of content. The nav bar will be dynamically generated to ensure that each section of content is captured.
 
-## Instructions
-
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+When traversing the web page, either through scrolling or clicking the navigation links, active animations will follow the user, and the navigation links will be highlighted to show where the user is currently.

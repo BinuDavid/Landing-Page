@@ -112,6 +112,7 @@ navUL.addEventListener("click", (e) => {
   const left = section.offsetLeft;
   scroll(top, left);
 });
+
 // Set sections as active
 window.addEventListener("scroll", () => {
   const viewportLog = inViewport();
