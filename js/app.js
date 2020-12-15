@@ -27,15 +27,21 @@ const nav = document.querySelector("nav");
  */
 
 //  Checks if element is in the viewport
-function inViewport() {
+
+let inViewport = () => {
+  const section1 = document.querySelector("#section1");
+
+  const OFFSET_TOP = section1.offsetTop;
+
   const viewportLog = {};
+
   sections.forEach((section) => {
     const bounds = section.getBoundingClientRect();
     if (
-      bounds.top >= 0 &&
-      bounds.left >= 0 &&
-      bounds.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight)
+      bounds.top >= bounds.bottom - bounds.height &&
+      bounds.top <= OFFSET_TOP &&
+      bounds.bottom >= OFFSET_TOP &&
+      bounds.bottom <= OFFSET_TOP + bounds.height
     ) {
       viewportLog[section.id] = true;
     } else {
@@ -43,7 +49,7 @@ function inViewport() {
     }
   });
   return viewportLog;
-}
+};
 
 /**
  * End Helper Functions
@@ -53,7 +59,7 @@ function inViewport() {
 
 // build the nav
 
-function buildNav() {
+let buildNav = () => {
   // Create Fragment
   const frag = document.createDocumentFragment();
 
@@ -72,7 +78,7 @@ function buildNav() {
     frag.append(link);
     navUL.append(frag);
   });
-}
+};
 
 // Add class 'active' to section when near top of viewport
 
