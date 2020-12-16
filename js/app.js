@@ -135,8 +135,6 @@ let buildNav = () => {
   });
 };
 
-// Add class 'active' to section when near top of viewport
-
 // Scroll to anchor ID using scrollTO event
 function scroll(top, left) {
   window.scrollTo({
@@ -178,7 +176,7 @@ navUL.addEventListener("click", (e) => {
   console.log("Window");
 });
 
-// Set sections as active
+// Add class 'active' to section when near top of viewport
 window.addEventListener("scroll", () => {
   const viewportLog = inViewport();
   for (const section in viewportLog) {
